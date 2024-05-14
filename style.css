@@ -1,0 +1,1299 @@
+.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+<button class="botao ativo">Cursos na Alura</button>
+<button class="botao">Criar projetos em Javascript</button>
+<button class="botao">Criar um portfolio</button>
+<button class="botao">Atualizar meu currículo</button>
+<button class="botao">Atualizar meu currículo</button><script src="main.js"></script>const botoes = document.querySelectorAll(".botao");
+console.log(botoes)for(let i=0; i <  botoes.length; i++){
+    console.log(i);
+}or(let j=0;j<botoes.length;j++){
+    botoes[j].classList.remove("ativo");
+}botoes[i].onclick = function(){
+    
+    botoes[i].classList.add("ativo");
+}const botoes = document.querySelectorAll(".botao");
+
+for(let i=0;i <botoes.length;i++){
+    botoes[i].onclick = function(){
+
+        for(let j=0;j<botoes.length;j++){
+            botoes[j].classList.remove("ativo");
+        }
+
+        botoes[i].classList.add("ativo");
+    }
+}<p class="texto">Este é o primeiro parágrafo.</p>
+<p class="texto">Este é o segundo parágrafo.</p>
+<p class="texto">Este é o terceiro parágrafo.</p>
+COPIAR CÓDIGO
+<p class="numero impar">1</p>
+<p class="numero par">2</p>
+<p class="numero impar">3</p>
+<p class="numero par">4</p>
+<p class="numero impar">5</p>for ([inicialização]; [condição]; [incremento]) {
+    declaração
+    }
+ COPIAR CÓDIGO
+ Porém, como podemos ler essa linha de código?
+ 
+ Primeiramente, retomamos ao ponto de que ele consiste em três expressões, no caso acima, inicialização, condição e incremento. Agora vamos entender o que cada uma significa.
+ 
+ A inicialização começa com uma expressão que inicia uma variável (geralmente um contador) e define seu valor inicial. Isso acontece apenas uma vez no início.
+ 
+ Em seguida, o for verifica uma condição. Enquanto essa condição for verdadeira, o loop continuará a ser executado.
+ 
+ Durante a execução, o for também irá adicionar um incremento ao código e logo após será realizado um teste de verificação do novo valor. Essa estrutura se repetirá até que a condição retorne “false” (falso).
+ 
+ Vamos agora partir de um exemplo prático:
+ 
+ for (var i = 1; i <= 5; i++) {
+   console.log(i);
+ }
+ COPIAR CÓDIGO
+ De acordo com o exemplo acima, o código executará:
+ 
+ Inicialização: para i = 1;
+ Condição: enquanto i permanecer menor ou igual a 5;
+ Incremento: acrescentará 1 a i;
+ Teste: chama no console para exibir o valor correspondente;
+ Atualização: a estrutura continua fazendo testes em i, até que i seja igual a 5. A partir disso, o código encerra a repetição.
+ Nesse caso, o console exibirá o seguinte resultado::
+ 
+ alt text: Captura de tela do console do navegador, exibindo o resultado de números sequenciais: 1, 2, 3, 4 e 5.
+ 
+ Vamos analisar outro exemplo, entendendo melhor como funciona essa estrutura. Agora podemos criar com o for uma exibição de números pares no console:
+ 
+ for (var i = 0; i <= 10; i += 2) {
+   console.log(i);
+ }
+ COPIAR CÓDIGO
+ Interpretando o código acima, temos:
+ 
+ Para i = 0;
+ Enquanto i permanecer menor ou igual a 10;
+ Será adicionado 2 a i;
+ Exibindo o resultado de cada repetição no console.
+ Esta será a exibição do console:
+ 
+ alt text: Captura de tela do console do navegador, exibindo o resultado de números pares em sequência, na ordem: 0, 2, 4, 6, 8 e 10.
+ 
+ Aprofundando sobre a estrutura do for
+ Vamos agora explorar mais a estrutura do for e examinar outras formas de repetição disponíveis.
+ 
+ Abaixo, criaremos um loop para iterar através de um array:
+ 
+ var frutas = ["Maçã", "Banana", "Laranja", "Pera"];
+ for (var i = 0; i < frutas.length; i++) {
+   console.log(frutas[i]);
+ }
+ COPIAR CÓDIGO
+ Aqui, o código funcionará da seguinte forma:
+ 
+ Para i = 0 (i indica a posição da lista frutas);
+ Enquanto i permanecer menor do que o comprimento da lista frutas;
+ Adiciona 1 a i;
+ Realiza o teste chamando no console o valor de i, de acordo com a sua posição na lista, exibindo o resultado de cada repetição.
+ Este será o resultado exibido no console:
+ 
+ alt text: Captura de tela do console do navegador, exibindo os itens da lista do código. Há uma sequência de resultados: “Maçã”, “Banana”, “Laranja” e “Pera”.
+ 
+ Operadores comuns
+ Já entendemos a estrutura do for e agora vamos explorar os operadores de incremento que podemos utilizar no nosso código. Veremos a seguir os operadores que são comumente usados nesse contexto.
+ 
+ ++ : Incremento
+ Adiciona 1 ao valor inicial de cada repetição. Equivale à equação x = x + 1, portanto, não necessita inserir um número ao lado do operador.
+ 
+ -- : Decremento
+ Subtrai 1 ao valor inicial de cada repetição. Equivale à equação x = x - 1, portanto, não necessita inserir um número ao lado do operador.
+ 
+ Demais operadores
+ Existem outros operadores além dos mais comuns. Vamos conhecê-los?
+ 
+ += : Atribuição com Incremento
+ Adiciona um valor determinado e atribui o resultado à própria variável, por exemplo:
+ 
+ let contador = 5;
+ contador += 3;
+ COPIAR CÓDIGO
+ Agora contador passa a ter valor 8, pois foi adicionado 3 ao valor inicial.
+ 
+ -= : Atribuição com Decremento
+ Subtrai um valor determinado e atribui o resultado à própria variável, por exemplo:
+ 
+ let contador = 10;
+ contador -= 4;
+ COPIAR CÓDIGO
+ Agora contador passa a ter valor 6.
+ 
+ *= : Multiplicação com Atribuição
+ Realiza a multiplicação por um valor determinado e atribui o resultado à própria variável, por exemplo:
+ 
+ var numero = 3;
+ numero *= 2;
+ COPIAR CÓDIGO
+ Agora, numero é igual a 6, pois foi multiplicado por 2.
+ 
+ /= : Divisão com Atribuição
+ Realiza a divisão por um valor determinado e atribui o resultado à própria variável, por exemplo:
+ 
+ var numero = 10;
+ numero /= 2; 
+ COPIAR CÓDIGO
+ Agora, numero é igual a 5, pois foi dividido por 2.
+ 
+ Conclusão
+ Para mais detalhes sobre o for e seus operadores, você pode acessar a documentação da estrutura do for. Em caso de dúvidas, não hesite em mandar uma mensagem no nosso fórum!
+ 
+  DISCUTIR NO FÓRUMconteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+COPIAR CÓDIGO
+O que esse código faz?
+
+display: flex; flex-direction: column, justify-content: center, align-items: center: alinha e centraliza os itens com os comandos;
+max-width: define uma largura máxima para nossa página de 1200px;
+width: 100%: ocupa a largura 100% da nossa página;
+margin: 0 auto: define uma margem 0px na vertical e automático na margem horizontal;
+Título Principal
+No protótipo do Figma, o título está posicionado no canto esquerdo da tela. Para alcançar o mesmo resultado em nossa página, precisamos adicionar o seguinte código ao arquivo style.css
+
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+}
+COPIAR CÓDIGO
+O que esse código faz?
+
+Text-align: left: altera o texto para esquerda Width:100%: define a largura da página em 100% font-size: 32px: altera o tamanho da fonte
+
+Underline (traço baixo ou sublinhado)
+Percebemos que no final do nosso título tem um _ (underline) na cor verde
+
+alt-text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” com o underline na cor verde sendo indicado por um seta vermelha.
+
+Para mudar apenas a cor da linha:
+
+vá até a descrição do seu título no HTML
+envolva-o com a tag <span>.
+ <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+COPIAR CÓDIGO
+Volte ao arquivo CSS e aplique a classe título principal à tag <span>. Isso permitirá que apenas a cor do underline seja alterada.
+
+.titulo-principal span {
+    color: var(--verde);
+}
+COPIAR CÓDIGO
+Estilizando os botões
+Agora vamos começar a estilizar nossos botões. Dentro da classe botao adicione o seguinte código:
+
+.botao {
+    font-family: "Crakra Petch", sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+COPIAR CÓDIGO
+O que esse código faz?
+
+font-family: altera a fonte do texto background-color: altera a cor de fundo para inativo color: altera a cor da fontes para branco display:flex, Justify-content:center: alinha e centraliza padding: adiciona espaçamento interno font-size: altera o tamanho da fonte align-items:center: alinha os botões width :100%: adiciona largura aos botões
+
+Assim temos o seguinte resultado:
+
+alt-text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões em colunas.
+
+Estilizando as bordas
+Observamos que as bordas ainda não estão iguais ao nosso protótipo. Para resolver isso, vamos ajustar o estilo das bordas dos nossos botões. Na mesma classe botao, adicione o seguinte código:
+
+ border-bottom: 4px solid var(--botao-ativo); 
+    border-left: 2px solid var(--botao-ativo); 
+    border-right: 2px solid var(--botao-ativo); 
+    border-top: none;
+COPIAR CÓDIGO
+O que esse código faz?
+
+border-bottom: 4px solid var(--botao-ativo): na borda inferior adiciona uma espessura, formato e cor;
+border-left: 2px solid var(--botao-ativo): na borda esquerda adiciona uma espessura, formato e cor;
+border-right: 2px solid var(--botao-ativo): na borda direita adiciona uma espessura, formato e cor;
+border-top: none: remove a borda superior.
+Assim temos o seguinte resultado:
+
+alt-text:Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões com suas bordas estilizadas.
+
+Media Query e responsividade
+Sabemos o quanto é importante que nossas páginas sejam responsivas, já que isso auxilia seu uso e visualização em diferentes telas. Vamos definir uma largura máxima, de 1200px, para nossa página. Isso significa que, quando a tela for mais larga do que isso, nosso conteúdo não se estenderá além dessa largura definida.
+
+Para isso, faremos uso do recurso media query, que permite que o conteúdo se adapte a diferentes condições, como a resolução da tela.
+
+Assim no nosso arquivo style.css vamos adicionar o seguinte código:
+
+.botoes {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+COPIAR CÓDIGO
+Assim temos os seguinte resultado:
+
+alt-text: gif da tela do projeto no navegador, com o título “Meus Objetivos do ano” e um quadro contendo quatro botões em uma coluna, representando um dispositivo móvel. Quando a tela é expandida, os botões se alinham lado a lado, demonstrando a responsividade."
+Arredondamentos das bordas
+Com base no nosso protótipo do Figma percebemos que as bordas dos cantos superiores são arredondadas, como mostra na imagem abaixo:
+
+alt-text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões com as bordas dos cantos arredondadas destacada por quadrados vermelhos.
+
+Para garantir que as bordas estejam arredondadas, tanto em telas maiores quanto em dispositivos menores, é necessário inserir o seguinte código dentro do nosso media query:
+
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
+COPIAR CÓDIGO
+O que esse código faz? Ele:
+
+.botao:first-child: seleciona somente o primeiro botão.
+botao:last-child: seleciona somente o último botão.
+border-radius: arredonda as bordas e cada valor se aplica a um canto específico no sentido horário, a partir do canto superior esquerdo.
+Por enquanto esse é o resultado do nosso projeto:
+
+alt-text:"Imagem animada de tela do projeto no navegador, com o título “Meus Objetivos do ano” e um quadro contendo quatro botões em uma coluna, representando um dispositivo móvel. Quando a tela é expandida, os botões se alinham lado a lado, demonstrando a responsividade."
+
+Agora nossas bordas estão arredondadas tanto em telas maiores quanto em dispositivos menores.
+
+Nas próximas aulas, vamos iniciar nossa programação em javascript. Até lá!
+
+ DISCUTIR NO FÓRUMdiv class="container">
+ <div class="item"></div>
+ <div class="item"></div>
+ <div class="item"></div>
+</div><h2 class="titulo-principal">Escola de Tecnologia<span>_</span></h2>
+<div class="botoes">
+    <button class="botao">Nossos cursos</button>
+    <button class="botao">Quem somos?</button>
+</div>
+COPIAR CÓDIGO
+div class="abas-textos">
+    
+</div><div class="abas-textos">
+    <div class="aba-conteudo">
+           
+    </div>
+</div>
+COPIAR CÓDIGO
+Para adicionar os textos correspondentes à primeira aba do protótipo, insira um título h3 (nome do botão) e um subtítulo h4 ("Tempo para completar o objetivo"):
+
+<div class="abas-textos">
+    <div class="aba-conteudo">
+        <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+</div>
+COPIAR CÓDIGO
+A primeira aba está pronta e vai aparecer ao clicar no botão "Estudar cursos na Alura"! Agora, vamos adicionar as demais abas correspondentes aos próximos botões.
+
+Copie e cole a div de classe .aba-conteudo três vezes no código, incluindo o texto conforme o botão correspondente. Fazendo isso nós teremos o código:
+
+<div class="abas-textos">
+    <div class="aba-conteudo">
+        <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+    <div class="aba-conteudo">
+        <h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em Javascript</h3>
+        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+    <div class="aba-conteudo">
+        <h3 class="aba-conteudo-titulo-principal">Criar um portfolio com os meus 3 melhores projetos</h3>
+        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+    <div class="aba-conteudo">
+        <h3 class="aba-conteudo-titulo-principal">Atualizar meu curriculo com os certificados da Alura</h3>
+        <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+</div>
+COPIAR CÓDIGO
+Aqui reutilizamos o mesmo código para os demais botões e fizemos alterações no título principal de cada um.
+
+Visualizando no Live Preview
+Agora que terminamos de criar o conteúdo no HTML, vamos verificar como ele é exibido. Temos duas opções de visualização, pelo Live Preview ou Live Server. Optamos pela visualização do Live Preview, e o resultado da nossa página até o momento é:
+
+alt text: Captura de tela do Live Preview, indicando o projeto que contém 4 botões, sendo que o primeiro botão está sendo clicado. Logo abaixo as frases “Estudar 4 cursos na Alura” e “Tempo para completar o objetivo”, seguido das frases “Criar 5 projetos em JavaScript”, “Criar um portfolio com os meus 3 melhores projetos” e “Atualizar meu currículo com os certificados da Alura”, sendo intercaladas pela frase “Tempo para completar o objetivo”. 
+
+A verificação do conteúdo é essencial para certificar se nosso código está funcionando corretamente e evitar que bugs (erros de código, em português) passem despercebidos.
+
+Organizando o conteúdo
+Vamos adicionar uma cor de fundo ao nosso texto. No CSS, adicione a propriedade background-color na classe .abas-textos, determinando a cor da variável --texto-fundo:
+
+.abas-textos{
+    background-color: var(--texto-fundo);
+}
+COPIAR CÓDIGO
+Depois de usar essa propriedade, o espaçamento entre os textos e os botões pode ficar desalinhado, como mostra a imagem abaixo:
+
+alt text: Captura de tela do Live Preview, indicando o projeto que contém 4 botões, sendo que o primeiro botão está sendo clicado. Logo abaixo as frases “Estudar 4 cursos na Alura” e “Tempo para completar o objetivo”, seguido das frases “Criar 5 projetos em JavaScript”, “Criar um portfolio com os meus 3 melhores projetos” e “Atualizar meu currículo com os certificados da Alura”, sendo intercaladas pela frase “Tempo para completar o objetivo”. Nos cantos da página existem duas marcações em vermelho indicando o espaçamento entre o texto e a borda.
+
+Para resolver isso, vamos criar uma nova div para encapsular os botões e textos. No HTML, crie uma div com a classe .conteudo. Ela deve iniciar antes da div .botoes e terminar após as divs .abas-textos, conforme mostra o código a seguir:
+
+<div class="conteudo">
+    <div class="botoes">
+        <button class="botao ativo">Cursos na Alura</button>
+        <button class="botao">Criar projetos em Javascript</button>
+        <button class="botao">Criar um portfolio</button>
+        <button class="botao">Atualizar meu currículo</button>
+    </div>
+    <div class="abas-textos">
+        <div class="aba-conteudo">
+            <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+            <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+        </div>
+        <div class="aba-conteudo">
+            <h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em Javascript</h3>
+            <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+        </div>
+        <div class="aba-conteudo">
+            <h3 class="aba-conteudo-titulo-principal">Criar um portfolio com os meus 3 melhores projetos</h3>
+            <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+        </div>
+        <div class="aba-conteudo">
+            <h3 class="aba-conteudo-titulo-principal">Atualizar meu curriculo com os certificados da Alura</h3>
+            <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+        </div>
+    </div>
+</div>
+COPIAR CÓDIGO
+Observe que essa div inicia na primeira linha e encerra na última linha deste trecho de código, agrupando todos os botões e abas. O resultado que você terá após essas mudanças pode ser observado na imagem abaixo:
+
+alt text: Captura de tela do Live Preview, indicando o projeto que contém 4 botões, sendo que o primeiro botão está sendo clicado. Logo abaixo as frases “Estudar 4 cursos na Alura” e “Tempo para completar o objetivo”, seguido das frases “Criar 5 projetos em JavaScript”, “Criar um portfolio com os meus 3 melhores projetos” e “Atualizar meu currículo com os certificados da Alura”, sendo intercaladas pela frase “Tempo para completar o objetivo”. 
+
+Estilos no CSS
+Agora, vamos incluir mais propriedades ao texto. Adicione um espaçamento interno de 40px usando o padding na classe .abas-textos do CSS.
+
+Defina também um arredondamento de 40px nos eixos inferior e esquerdo usando a propriedade border-radius na mesma classe:
+
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+COPIAR CÓDIGO
+padding: controla o espaço entre o conteúdo e a borda do elemento.
+border-radius: permite arredondar os cantos de um elemento.
+É importante lembrar que ao declarar propriedades para eixos individuais, a ordem a ser seguida é: "superior, direita, inferior, esquerda".
+
+Ajustando a classe .ativo
+Nossas abas estão quase prontas! No entanto, perceba que ao adicionar a classe .ativo na primeira aba, ela receberá a mesma estilização referente ao botão:
+
+alt text: Captura de tela do projeto com quatro botões dispostos, sendo que o botão na posição 0 está marcado com a classe "ativo", denotando que foi selecionado. Logo abaixo, encontra-se o texto "Estudar 4 cursos na Alura, Tempo para completar o objetivo", exibindo a mesma estilização aplicada ao botão marcado com a classe "ativo".
+
+Queremos aplicar a classe .ativo apenas quando:
+
+É um botão com a classe .botao;
+O botão é clicado (ou seja, está ativo).
+Para isso, vamos juntar a classe .botao com a classe .ativo no CSS. Assim, a mudança de estilo acontecerá somente nessas condições.
+
+.botao.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+COPIAR CÓDIGO
+alt text: Captura de tela do Live Preview, indicando o projeto que contém 4 botões, sendo que o primeiro botão está sendo clicado. Logo abaixo as frases “Estudar 4 cursos na Alura” e “Tempo para completar o objetivo”, seguido das frases “Criar 5 projetos em JavaScript”, “Criar um portfolio com os meus 3 melhores projetos” e “Atualizar meu currículo com os certificados da Alura”, sendo intercaladas pela frase “Tempo para completar o objetivo”. 
+
+Mostrar e esconder conteúdos
+Agora que nosso conteúdo está ajustado, vamos concluir o estilo dos textos!
+
+Para o conteúdo com a classe .ativo, vamos usar display: block;. Assim, o texto do botão ativo será exibido na tela.
+
+.aba-conteudo.ativo{
+    display:block;   
+}
+COPIAR CÓDIGO
+display: block;: mostra o elemento, ocupando toda a largura.
+
+Para os outros botões não clicados, usaremos display: none;. Isso tornará os textos invisíveis.
+
+.aba-conteudo{
+    display: none;
+}
+COPIAR CÓDIGO
+display: none;: esconde o elemento.
+
+Detalhes finais
+Agora, vamos incluir alguns toques finais ao nosso texto!
+
+Volte ao protótipo do Figma e observe o tamanho da fonte, a centralização e as cores. Em seguida, compare com o seu projeto até agora. Percebemos que existem alguns detalhes que podemos ajustar, não é mesmo?
+
+Para isso, no CSS vamos adicionar as propriedadesfont-size, text-align, color e text-transform nas classes de título principal e secundário, conforme mostrado abaixo:
+
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+COPIAR CÓDIGO
+*font-size: define o tamanho da fonte;
+
+text-align: center;: alinha o texto ao centro;
+color: escolhe a cor da fonte;
+text-transform: uppercase;: transforma o texto todo em maiúsculas;
+Parabéns! O conteúdo do seu projeto agora está completo com os textos e estilos necessários.
+
+alt text: Captura de tela do projeto com quatro botões dispostos, sendo que o botão na posição 0 está marcado com a classe "ativo", denotando que foi selecionado. Logo abaixo, encontra-se o texto "Estudar 4 cursos na Alura, Tempo para completar o objetivo", correspondente à aba do botão clicado.
+
+ DISCUTIR NO FÓRUMdiv class="aba-conteudo ativo">1</div>
+ <div class="aba-conteudo">2</div>
+ <div class="aba-conteudo">3</div>
+ COPIAR CÓDIGO
+ CSS:
+ 
+ .aba-conteudo{
+   width: 100px;
+   height: 100px;
+   background: #b5b;
+   margin: 10px;
+ }
+ 
+ .ativo{
+   display: block;
+ }
+ COPIAR CÓDIGO
+ Entretanto, seu código mantém aparecendo as três tags divs e ela quer que somente apareça quando receber a classe. Assinale a alternativa que corrige esse problema.<div class="aba-conteudo">
+    <h3 class="aba-conteudo-titulo-principal">Boas vindas</h3>
+    <h4 class="aba-conteudo-titulo-secundario">Livros, filmes, músicas e arte</h4>
+  </div>
+  COPIAR CÓDIGO
+  Agora seu desejo é criar um estilo para essa aba de conteúdo. Ordene todos os blocos abaixo para que:
+  
+  Adicione uma largura de 50% da página,
+  Centralize os textos ao centro;
+  Centralize a divisão de conteúdo ao centro;
+  Espaçamento interno na parte de cima e de baixo tenha 50px.
+  Nessa aula, aprendemos como tornar nossas abas de conteúdo dinâmicas ao reconhecer padrões e replicá-los. Além disso, exploramos um novo comando para introduzir uma contagem regressiva no nosso projeto.
+
+  Vamos agora revisar nosso código.
+  
+  Reconhecendo padrões com for
+  Vamos tornar o texto dinâmico de acordo com o botão selecionado!
+  
+  Podemos simplificar o processo reconhecendo um padrão e aplicando a mesma estrutura for usada nos botões. Assim, percorremos a lista usando o contador e adicionamos a classe .ativo ao item clicado.
+  
+  Abaixo da declaração const botoes no código JavaScript, adicione uma const chamada textos.
+  
+  Atribua-a ao DOM e use o método querySelectorAll para selecionar os elementos HTML com a classe .aba-conteudo.
+  
+  A estrutura ficará assim:
+  
+  const botoes = document.querySelectorAll(".botao");
+  const textos = document.querySelectorAll(".aba-conteudo");
+  COPIAR CÓDIGO
+  Agora, vamos adicionar a classe .ativo aos textos para mostrar o conteúdo da aba. Replicando o padrão dos botões, copie e cole o método classList com o comando add da constante botoes, alterando a const para textos, como mostra a seguir:
+  
+  botoes[i].classList.add("ativo");
+  textos[i].classList.add("ativo");
+  COPIAR CÓDIGO
+  O classList.add acessa o elemento de índice i da lista e adiciona a classe correspondente.
+  
+  Feito isso, precisamos garantir que os textos não selecionados não permaneçam com a classe .ativo.
+  
+  Copie e cole o método classList com o comando remove da constante botoes, alterando a const para textos, como mostra a seguir:
+  
+  botoes[j].classList.remove("ativo");
+  textos[j].classList.remove("ativo");
+  COPIAR CÓDIGO
+  O classList.remove acessa o elemento de índice j da lista e remove a classe correspondente;
+  
+  Ao final, teremos uma nova estrutura de repetição criada dentro do mesmo loop for, conforme o exemplo no código a seguir:
+  
+  for (let i = 0; i < botoes.length; i++) {
+      botoes[i].onclick = function () {
+  
+          for (let j = 0; j < botoes.length; j++) {
+              botoes[j].classList.remove("ativo");
+              textos[j].classList.remove("ativo");
+          }
+  
+          botoes[i].classList.add("ativo");
+          textos[i].classList.add("ativo");
+      }
+  }
+  COPIAR CÓDIGO
+  Adicionando um contador
+  Agora, vamos incorporar um contador que exibirá uma contagem regressiva indicando o tempo restante para alcançar o objetivo.
+  
+  Para isso, crie uma div com a classe .contador no HTML, dentro da div class=’aba-conteudo:
+  
+  <div class="aba-conteudo ativo">
+      <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+      <div class="contador"></div>
+  </div>
+  COPIAR CÓDIGO
+  Copie e cole essa div nas demais abas de conteúdo:
+  
+  <div class="aba-conteudo ativo">
+      <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+      <div class="contador"></div>
+  </div>
+  <div class="aba-conteudo">
+      <h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em Javascript</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+      <div class="contador"></div>
+  </div>
+  <div class="aba-conteudo">
+      <h3 class="aba-conteudo-titulo-principal">Criar um portfolio com os meus 3 melhores projetos</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+      <div class="contador"></div>
+  </div>
+  <div class="aba-conteudo">
+      <h3 class="aba-conteudo-titulo-principal">Atualizar meu currículo com os certificados da Alura</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+      <div class="contador"></div>
+  </div>
+  COPIAR CÓDIGO
+  Em seguida, no arquivo do JavaScript, crie uma const chamada contadores, selecionando todos os elementos com a classe .contador usando o método querySelectorAll:
+  
+  const contadores = document.querySelectorAll(".contador");
+  COPIAR CÓDIGO
+  O querySelectorAll seleciona todos os elementos de classe .contador, sendo assim, retorna uma lista.
+  
+  Agora, vamos definir o conteúdo dos contadores. Inicialmente, você pode adicionar "Contagem regressiva" como teste:
+  
+  contadores[0].textContent = "Contagem regressiva";
+  COPIAR CÓDIGO
+  Feitas essas alterações, nossa página deve estar similar a imagem abaixo, incluindo o texto de “Contagem regressiva” destacado por um retângulo e seta vermelha.
+  
+  alt text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho o texto “contagem regressiva”.
+  
+  Determinando o tempo do objetivo
+  Após o teste, vamos determinar a data final do objetivo.
+  
+  Crie uma nova const de nome tempoObjetivo1usando o comando new Date, inserindo os valores no formato: “ANO - MÊS - DIA”.
+  
+  Agora, ao invés de mostrar o texto "Contagem regressiva" na primeira aba de conteúdo da página, vamos mostrar a constante tempoObjetivo1 que representa a data final do nosso objetivo.
+  
+  const tempoObjetivo1 = new Date("2024-10-05");
+  
+  contadores[0].textContent = tempoObjetivo1;
+  COPIAR CÓDIGO
+  Se observarmos no navegador, o dia mostrado na tela (dia 4) não corresponde ao dia inserido na constante tempoObjetivo (dia 5).
+  
+  alt text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho o texto “Fri Oct 04 2024 21:00:00:00 GMT-0300 (horário de Brasília)”. 
+  
+  Para resolver esse problema, adicione o texto “T00:00:00” ao lado da data, isso representa o tempo ao qual a data se refere.
+  
+  const tempoObjetivo1 = new Date("2023-10-05T00:00:00");
+  COPIAR CÓDIGO
+  alt text: Captura de tela do projeto no navegador, indicando um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho o texto “Sat Oct 05 2024 21:00:00:00 GMT-0300 (horário de Brasília)”.
+  
+  Criando uma contagem regressiva
+  Já criamos o tempo desejado do objetivo! Porém, para fazer uma contagem regressiva é necessário uma subtração do tempo desejado (tempoObjetivo1) pelo tempo atual.
+  
+  Para isso, vamos identificar o tempo atual criando uma variável let tempoAtual e atribuindo à ela o comando new Date():
+  
+  let tempoAtual = new Date();
+  COPIAR CÓDIGO
+  Ao declarar parâmetros vazios (), o código selecionará o tempo local do seu computador.
+  
+  Ao subtrair o tempoObjetivo1 pelo tempoAtual, teremos o seguinte código:
+  
+  contadores[0].textContent = tempoObjetivo1 - tempoAtual;
+  COPIAR CÓDIGO
+  Por fim, o código completo criado para dar funcionalidade à contagem regressiva será:
+  
+  const contadores = document.querySelectorAll(".contador");
+  const tempoObjetivo1 = new Date("2023-10-05T00:00:00");
+  let tempoAtual = new Date();
+  
+  contadores[0].textContent = tempoObjetivo1 - tempoAtual;
+  COPIAR CÓDIGO
+  Dessa forma, o JavaScript exibirá um número consideravelmente grande no nosso projeto:
+  
+  alt text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho o texto “4192249765”. 
+  
+  Nas próximas aulas, vamos ajustar a exibição desse número. Até lá!
+  
+   DISCUTIR NO FÓRUMNesta aula, usamos a propriedade textContent para escrever um conteúdo na página. No entanto, existem outras propriedades que também podemos utilizar para esse fim, como o innerText e innerHTML. Vamos entender melhor as diferenças entre eles?
+
+   Vamos partir do mesmo exemplo de aplicação para as três propriedades considerando o elemento HTML abaixo:
+   
+   <p>       Vamos verificar o <strong>retorno!</strong> </p>
+   COPIAR CÓDIGO
+   textContent
+   A propriedade textContent retorna o conteúdo de texto com os espaçamentos, mas sem as tags:
+   
+   alt text: Captura de tela do console, onde há um espaçamento e, logo em seguida, a frase “Vamos verificar o retorno!”. 
+   
+   Note que há um espaçamento antes do texto e o mesmo é inserido nessa exibição.
+   
+   innerHTML
+   Por outro lado, o innerHTML é uma propriedade que exibe o conteúdo de texto do elemento, incluindo tanto os espaçamentos quanto às tags HTML internas:
+   
+   alt text: Captura de tela do console, onde há um espaçamento e, logo em seguida, a frase “Vamos verificar o retorno!” com a palavra “retorno” destacada pela tag HTML “strong”, que indica a fonte em negrito. 
+   
+   Note que aqui também existe um espaçamento inserido na exibição.
+   
+   innerText
+   Por fim, o innerText exibe apenas o conteúdo em formato de texto puro do elemento e todos os seus filhos, sem marcações e espaçamento. Isso se aplica a todos os elementos, exceto script e style.
+   
+   alt text: Captura de tela do console, exibindo a frase “Vamos verificar o retorno!”. 
+   
+   Conclusão
+   Para compreender melhor as diferenças, você pode testar conteúdos através do link “As diferenças entre innerText, innerHTML e textContent”.
+   
+   Você também pode acessar as documentações a seguir:
+   
+   Element.innerHTML
+   
+   Node.textContent
+   
+   Node.innerText
+   
+   Esses sites estão em inglês e você pode alterar o idioma no canto superior direito da página, como mostra a figura abaixo:
+   
+   alt text: Captura de tela do navegador, com quadro vermelho destacado para a linguagem “Português (do Brasil)”. 
+   
+    DISCUTIR NO FÓRUMconst contadores = document.querySelectorAll(".contador");
+    const tempoObjetivo1 = new Date("2023-08-18T15:37:07");
+    
+    contadores[0].textContent = tempoObjetivo1;
+    COPIAR CÓDIGO
+    O código acima exibirá o seguinte resultado:
+    
+    alt text: Captura de tela do projeto no navegador, indicando um quadro azul, com os textos: “Fri Aug 18 2023 15:37:07 GMT-0300 (horário de Brasília)”. 
+    
+    Você também pode extrair informações específicas dessa data, como o ano, mês, dia e horário. Para isso é necessário a utilização de um dos seus métodos. Vamos conhecer alguns deles a seguir!
+    
+    Para observar os exemplos abaixo, vamos criar ao código uma variável chamada tempo para exibir os seguintes métodos:
+    
+    getTime()
+    Retorna o tempo em milissegundos:
+    
+    const contadores = document.querySelectorAll(".contador");
+    const tempoObjetivo1 = new Date("2023-08-18T15:37:07")
+    
+    let tempo = tempoObjetivo1.getTime();
+    
+    contadores[0].textContent = tempo;
+    COPIAR CÓDIGO
+    Assim será exibido no navegador:
+    
+    alt text: Captura de tela do navegador, com quadro azul e o texto “Inserindo datas”, seguido da sequência de números: “1692383827000”
+    
+    getDate()
+    Retorna o dia do mês, em números inteiros entre 1 e 31:
+    
+    const contadores = document.querySelectorAll(".contador");
+    const tempoObjetivo1 = new Date("2023-08-18T15:37:07")
+    
+    let tempo = tempoObjetivo1.getDate();
+    
+    contadores[0].textContent = tempo;
+    COPIAR CÓDIGO
+    Será exibido o dia 18 no navegador:
+    
+    alt text: Captura de tela do navegador, com quadro azul e o texto “Inserindo datas”, seguido do número “18”.
+    
+    getMonth()
+    Retorna o mês atual, considerando que janeiro inicia em 0 e dezembro termina em 11:
+    
+    const contadores = document.querySelectorAll(".contador");
+    const tempoObjetivo1 = new Date("2023-08-18T15:37:07")
+    
+    let tempo = tempoObjetivo1.getMonth();
+    
+    contadores[0].textContent = tempo;
+    COPIAR CÓDIGO
+    Agora, retornará o número 7, referente ao mês deagosto:
+    
+    alt text: Captura de tela do navegador, com quadro azul e o texto “Inserindo datas”, seguido do número “7”.
+    
+    getFullYear()
+    Retorna o ano atual:
+    
+    const contadores = document.querySelectorAll(".contador");
+    const tempoObjetivo1 = new Date("2023-08-18T15:37:07")
+    
+    let tempo = tempoObjetivo1.getFullYear();
+    
+    contadores[0].textContent = tempo;
+    COPIAR CÓDIGO
+    Esta será a exibição do ano 2023:
+    
+    alt text: Captura de tela do navegador, com quadro azul e o texto “Inserindo datas”, seguido do número “2023”.
+    
+    Conclusão
+    Com o objeto date você pode definir datas futuras ou passadas, realizar cálculos de diferença entre datas (como fizemos em aula, criando uma contagem regressiva), formatar datas e muito mais!
+    
+    Para melhor compreensão, você pode ler um artigo aqui da Alura intitulado Trabalhando com datas em JavaScript e também acessar a documentação do objeto Date.
+    
+     DISCUTIR NO FÓRUMbserve como está a nossa contagem regressiva:
+
+     alt-text: Captura de tela contendo uma sequência de números :3835483034 
+     
+     Nossos dados em JavaScript estão atualmente no formato de milissegundos, mas queremos convertê-los para o formato de segundos, minutos, horas e dias. Para realizar essa transformação, vamos criar a função calculaTempo que cuidará desse processo.
+     
+     Agora vamos atualizar nosso código trocando as variáveis já atribuídas no índice contadores[0], onde estava tempoObjetivo - tempoAtual, pela nova função que iremos introduzir.
+     
+     Assim temos o seguinte código:
+     
+     contadores[0].textContent = calculaTempo(tempoObjetivo1);
+     COPIAR CÓDIGO
+     Aqui, você está usando uma função chamada calculaTempo e dando a ela um valor chamado tempoObjetivo1. Isso é como dar uma tarefa para essa função.
+     
+     Dentro da função
+     Vamos criar a função chamada calculaTempo, que recebe um valor chamado tempoObjetivo como entrada, e calcular o tempo restante entre a hora e data atual (tempoAtual) e um objetivo futuro (tempoObjetivo). Assim, teremos o seguinte código:
+     
+     function calculaTempo(tempoObjetivo) {
+         let tempoAtual = new Date();
+         let tempoFinal = tempoObjetivo - tempoAtual;
+     COPIAR CÓDIGO
+     Entendendo o código
+     
+     let tempoAtual = new Date();: Estamos obtendo a hora e a data atuais do relógio no momento em que a função é chamada e armazenando essa informação na variável tempoAtual.
+     let tempoFinal = tempoObjetivo - tempoAtual;: Agora estamos subtraindo o tempoAtual do tempoObjetivo. Isso nos dá a diferença entre o momento que queremos alcançar (o tempoObjetivo) e o momento atual (o tempoAtual). O resultado é um valor que representa o tempo que falta para chegar ao objetivo.
+     Tratando o tempo
+     Além disso, dentro da nossa função calculaTempo, vamos incluir os cálculos necessários para transformar o intervalo de tempo, que inicialmente estava em milissegundos, em valores correspondentes em dias, horas, minutos e segundos.
+     
+     Para fazer isso, adicione o seguinte código:
+     
+       let segundos = Math.floor(tempoFinal / 1000);
+         let minutos = Math.floor(segundos / 60);
+         let horas = Math.floor(minutos / 60);
+         let dias = Math.floor(horas / 24);
+     COPIAR CÓDIGO
+     O que esse código faz?
+     
+     let segundos = Math.floor(tempoFinal / 1000);: Divide o intervalo de tempo (em milissegundos) por 1000 para obter a quantidade de segundos restantes.
+     let minutos = Math.floor(segundos / 60);: Divide o valor dos segundos pelo número de segundos que existem em um minuto (60) para obter a quantidade de minutos restantes.
+     let horas = Math.floor(minutos / 60);: Divide o valor dos minutos pelo número de minutos presentes em uma hora (60) para obter a quantidade de horas restantes.
+     let dias = Math.floor(horas / 24);: Divide o valor das horas pelo número de horas em um dia (24) para obter a quantidade de dias restantes.
+     Return
+     Agora é o momento de fazer com que nossa função retorne todo o código formatado, que exibirá o tempo que falta em dias, horas, minutos e segundos de maneira organizada. Isso permitirá que tenhamos a representação correta do tempo restante em nossa página.
+     
+     Para fazer isso vamos adicionar o código abaixo dentro da nossa função calculaTempo
+     
+      return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+     COPIAR CÓDIGO
+     Entendendo o código
+     
+     dias, horas, minutos, segundos: São variáveis que contêm valores numéricos correspondentes a cada unidade de tempo, ou seja, a quantidade de dias, horas, minutos e segundos.
+     
+     + : O operador de adição (+) é usado para juntar as partes.
+     
+     " dias "," horas "," minutos ", " segundos ": São texto fixo que serve como separador entre os valores das diferentes unidades de tempo.
+     
+     Assim temos os seguinte resultado do nosso tempo:
+     
+     alt-text: Captura de tela mostrando a seguinte contagem regressiva: 44 dias 1067 horas 64045 minutos 3842727 segundos.
+     
+     Não ultrapassando os limites do tempo
+     Percebemos que nosso tempo está ultrapassando os limites válidos. Precisamos deixar que nossa contagem regressiva seja precisa e siga as unidades de tempo corretamente. Então vamos adicionar antes do return e dentro da nossa função function calculaTempo(tempoObjetivo) o seguinte código:
+     
+     segundos %= 60;
+     minutos %= 60;
+     horas %= 24;
+     COPIAR CÓDIGO
+     Observando a parte do código da divisão dos segundos, o que esse código faz?
+     
+     segundos %= 60;: Aqui, estamos pegando o valor da variável segundos e aplicando o operador %= para fazer a operação de módulo com 60. Isso significa que estamos dividindo o valor de segundos por 60 e atribuindo o restante da divisão novamente à variável segundos. Isso é feito para garantir que os segundos não ultrapassem 60, ou seja, se o valor de segundos fosse, por exemplo, 75, após essa operação, ele seria ajustado para 15, pois 75 dividido por 60 resulta em 1 com restante 15.
+     
+     Assim fica o resultado da nossa contagem regressiva:
+     
+     alt-text:Captura de tela mostrando a seguinte contagem regressiva: 44 dias 9 horas 31 minutos 56 segundos.
+     
+     Estilizando
+     Dentro do nosso arquivo style.css, na linha 91m vamos adicionar o seguinte código para estilizar nossa contagem regressiva:
+     
+     .contador{
+         font-size: 20px;
+         text-align: center;
+     }
+     COPIAR CÓDIGO
+     Resultado final da aula
+     Até aqui o nosso projeto tem seguinte resultado:
+     
+     alt-text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “estudar 4 cursos na Alura”, “tempo para completar o objetivo” e a seguinte contagem regressiva: 44 dias 9 horas 31 minutos 56 segundos.
+     
+      DISCUTIR NO FÓRUMp class="numero">0</p>
+      <p class="numero">1</p>
+      <p class="numero">2</p>
+      <p class="numeror">3</p>
+      COPIAR CÓDIGO
+      Seu desejo é adicionar classe ímpar para os números que são ímpares e classe par para os números que são pares. Ordene todos os blocos para criar esse algoritmo.
+      
+      <p class="numero">1</p>
+      <p class="numero">0</p>
+      <p class="numero">3</p>
+      <p class="numero">2</p>
+      COPIAR CÓDIGO
+      Sabemos que, para coletar todos os elementos com a classe .numero, é utilizado o comando
+      
+      const numeros = document.querySelectorAll('.numero');
+      
+      Ordene todos os blocos para acessar o conteúdo interno do elemento e verificar se é par ou ímpar. Caso seja par adicione a classe par e se for impar adicione impar;
+      
+      ando estamos trabalhando apenas com números naturais, ou seja {0, 1, 2, 3, 4, 5, …}, a divisão é feita da seguinte maneira:
+
+      alt-text: Demonstração da operação matemática de 5 dividido por 2. O dividendo é 5, o divisor é 2, o quociente é 2 e o resto é 1.
+      
+      No curso estamos convertendo um tempo total para dias, horas, minutos e segundos, e é importante entender como ocorre esse processo.
+      
+      No nosso exemplo de conversão de um tempo total para dias, horas, minutos e segundos, é possível entender que, por exemplo, 130 segundos precisa ser lido como a 2 minutos e 10 segundos. Portanto,
+      
+      130/60 = 2 (resto 10)
+      
+      alt-text: Demonstração da operação matemática de 130 dividido por 60. O dividendo é 130, o divisor é 60, o quociente é 2 e o resto é 10.
+      Agora para mostrar como montar essa lógica, vamos desenvolver o seguinte código:
+      
+      segundos =130; 
+      minutos = Math.floor(segundos / 60; // resultado esperado: 2
+      segundos %= 60; // resultados esperado : 10
+      COPIAR CÓDIGO
+      No código acima, a operação na variável minutos é responsável por capturar o quociente da divisão, enquanto na última linha é extraído o resto da divisão.
+      
+      Conclusão
+      O operador "%" (de módulo) é uma ferramenta essencial em programação que ajuda a calcular restos, controlar repetições, verificar datas e horas, validar dados e fazer sorteios justos. É uma calculadora versátil para programadores.
+      
+      Para conhecer mais sobre o operadores e a aplicação deles, separamos esse material que vai te ajudar nessa jornada, você pode acessar clicando no link a seguir Expressões e operadores
+      
+       DISCUTIR NO FÓRUMA concatenação de strings é um processo fundamental na programação, especialmente quando você deseja combinar duas ou mais strings para formar uma única string. Durante esse material vamos explorar como funciona a concatenação de strings usando esse operador, juntamente com exemplos práticos!
+
+       O que é String?
+       String é um tipo de dado em programação usado para representar texto. Ela é composta por um conjunto de caracteres que podem ser letras, números, símbolos e espaços.
+       
+       Em termos mais simples, uma string é uma sequência de caracteres que forma uma mensagem ou informação textual, por exemplo:
+       
+       let mensagem = "Olá, mundo!";
+       COPIAR CÓDIGO
+       O que é Concatenação de Strings?
+       Concatenação de strings é a ação de combinar duas ou mais strings para criar uma nova string que contém o conteúdo das strings originais na ordem em que foram combinadas.
+       
+       Observe o código abaixo:
+       
+       let nome = "João";
+       let sobrenome = "Silva";
+       let nomeCompleto = nome + " " + sobrenome;
+       
+       console.log(nomeCompleto); // Saída: "João Silva"
+       COPIAR CÓDIGO
+       No exemplo acima, nós declaramos duas variáveis nome e sobrenome e depois as concatenamos usando o operador de adição e um espaço em branco " ". O resultado é a string "João Silva".
+       
+       Operador de Adição (+) para Concatenação de Strings
+       Em JavaScript, o operador de adição (+) não só é usado para realizar operações aritméticas de adição, mas também pode ser usado para concatenar strings.
+       
+       Observe o código abaixo:
+       
+       // Declaração das variáveis
+       let idade = 30;
+       
+       // Concatenação de string com valor numérico
+       let mensagem = "A idade é: " + idade;
+       
+       // Resultado: "A idade é: 30"
+       console.log(mensagem);
+       COPIAR CÓDIGO
+       Neste exemplo, a variável idade é um valor numérico. No entanto, quando a concatenamos com uma string usando o operador de adição, o JavaScript converte automaticamente o valor numérico em uma string para que a concatenação funcione corretamente.
+       
+       Conclusão
+       Para aprofundar sobre o que é concatenação de strings utilizadas neste curso, você pode ler o artigo Strings com JavaScript: o que são e como manipulá-las. Bons estudos!
+       
+        DISCUTIR NO FÓRUMo analisarmos nosso protótipo, notamos a presença de três objetivos adicionais que ainda não possuem uma contagem regressiva. Vamos ajustar isso?
+
+        Adicionando outros objetivos
+        Nesta aula, vamos atribuir um tempo a esses objetivos. Dentro do nosso arquivo main.js e, logo abaixo de nossas variáveis const tempoObjetivo1 = new Date("2020-10-05T00:00:00");, vamos adicionar o seguinte código:
+        
+        const tempoObjetivo2 = new Date("2023-12-05T00:00:00");
+        const tempoObjetivo3 = new Date("2023-12-30T00:00:00");
+        const tempoObjetivo4 = new Date("2024-02-01T00:00:00");
+        COPIAR CÓDIGO
+        Nós criamos mais três variáveis cada uma representando um momento específico no tempo.
+        
+        Utilize o atalho de clicar na linha de código que gostaria de copiar apertar Ctrl+C depois Ctrl+V para copiar automaticamente.
+        
+        Criando uma lista
+        Agora, vamos adicionar os elementos da classe contador dentro do nosso conteúdo para que a função calculaTempo seja efetiva. Temos duas opções de lista para fazer isso:
+        
+        O primeiro exemplo seria dessa maneira:
+        
+        contadores[0].textContent = calculaTempo(tempoObjetivo1);
+        contadores[1].textContent = calculaTempo(tempoObjetivo2);
+        contadores[2].textContent = calculaTempo(tempoObjetivo3);
+        contadores[3].textContent = calculaTempo(tempoObjetivo4);
+        COPIAR CÓDIGO
+        Isso vai atualizar o conteúdo de cada elemento de classe .contador com o resultado da função calculaTempo para cada um dos tempos objetivos.
+        
+        No entanto, buscamos automatizar nosso código. Portanto, logo abaixo das nossas variáveis const, vamos implementar uma estrutura do tipo Lista, que irá melhorar o nosso código:
+        
+        const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
+        COPIAR CÓDIGO
+        Nesta parte do código, criamos uma lista chamada tempos e a preenchemos com objetos de datas específicas: tempoObjetivo1, tempoObjetivo2, tempoObjetivo3 e tempoObjetivo4.
+        
+        Quando estamos lidando com muitos conjuntos de dados, por exemplo, várias contagens regressivas, usar uma lista é uma maneira eficaz de organizar nosso código, tornando-o mais claro e fácil de gerenciar.
+        
+        Assim podemos alterar somente a nossa função, ou seja, ao invés de chamar o tempoObjetivo1 nos vamos chamar a várivel tempos[0]` :
+        
+        contadores[0].textContent = calculaTempo(tempoObjetivo1); //Antes
+        
+        contadores[0].textContent = calculaTempo(tempos[0]); // Depois
+        COPIAR CÓDIGO
+        O que esse código faz?
+        
+        contadores[0]: Seleciona o primeiro elemento da lista de elementos que têm a classe "contador", que foi armazenada previamente na variável contadores. .textContent = calculaTempo(tempos[0]);: Atribui o resultado da função calculaTempo para o primeiro elemento da lista de contadores.
+        
+        Neste trecho do código, estamos associando o resultado da função calculaTempo ao primeiro elemento da lista de contadores. Nesse contexto, esse primeiro elemento é o nosso primeiro objetivo. Isso significa que o tempo calculado será associado a esse objetivo específico.
+        
+        Laço de repetição
+        Para aprimorar o código e evitar repetição, podemos usar um laço de repetição para realizar a mesma ação para todos os objetivos da página.
+        
+        Para fazer isso, vamos mover a linha contadores[0].textContent = calculaTempo(tempos[0]);, que se refere à nossa lista contadores, para dentro do nosso laço de repetição de repetição. O resultado será o seguinte código:
+        
+        // Para cada objetivo na lista de contadores
+         for (let i=0; i<contadores.length;i++){
+        //Calcular o tempo usando a função e associá-lo ao objetivo
+                contadores[i].textContent = calculaTempo(tempos[i]);   
+        COPIAR CÓDIGO
+        O que esse código faz?
+        
+        Esse código realiza um loop for que percorre todos os elementos da lista contadores e, para cada elemento, atualiza seu conteúdo com o resultado da função calculaTempo aplicada ao elemento correspondente do lista tempos. Ou seja:
+        
+        for (let i=0; i<contadores.length; i++) {: Inicia um loop que vai de 0 até o tamanho da lista de elementos contadores. A variável i é usada como contador do loop.
+        
+        contadores[i].textContent = calculaTempo(tempos[i]);: Para cada iteração do loop, o código acessa o elemento i da lista contadores (ou seja, o elemento na posição i) e atribui a ele o resultado da função calculaTempo aplicada ao elemento i da lista tempos.
+        
+        Nosso código está funcionando, mas a contagem está parada e só está atualizando quando recarregamos a página. Isso significa que ainda temos um pequeno ajuste a fazer.
+        
+        alt-text: Animação da tela do projeto no navegador com o título "Meus Objetivos do ano" e um quadro contendo quatro botões. O botão na posição zero está atualmente selecionado. Além disso, há o texto "estudar 4 cursos na Alura" e "tempo para completar o objetivo" com o cronômetro exibindo os segundos, que são atualizados somente ao reiniciar a página.
+        
+        Função de atualização
+        Vamos começar criando uma função chamada atualizaCronometro. Em seguida, moveremos nosso laço de repetição para dentro dessa função e faremos com que ela retorne um valor. O resultado será o seguinte código:
+        
+        function atualizaCronometro(){
+            for (let i=0; i<contadores.length;i++){
+                contadores[i].textContent = calculaTempo(tempos[i]);   
+            }
+        }
+        COPIAR CÓDIGO
+        Precisamos também criar uma função que faz o nosso cronômetro iniciar imediatamente, assim temos o seguinte código:
+        
+        function comecaCronometro(){
+            atualizaCronometro();
+            setInterval(atualizaCronometro,1000);
+        }
+        
+        comecaCronometro();
+        COPIAR CÓDIGO
+        O que esse código faz?
+        
+        Chama a função atualizaCronometro(): Isso inicializa o cronômetro imediatamente quando a função comecaCronometro é chamada pela primeira vez.
+        
+        Usa a função setInterval(atualizaCronometro, 1000): Isso configura um intervalo de tempo para chamar repetidamente a função atualizaCronometro a cada 1000 milissegundos (ou 1 segundo). Isso cria um cronômetro que atualiza a exibição a cada segundo.
+        
+        Ou seja, esse código define e inicia um cronômetro que se atualiza a cada segundo. A função comecaCronometro garante que o cronômetro comece imediatamente e o uso do setInterval garante que a atualização ocorra periodicamente.
+        
+        Para melhorar a organização e legibilidade do código, selecione as funções atualizaCronometro e comecaCronometro e mova-as para o final do código. Dessa forma, tanto você quanto outras pessoas poderão compreender o código com mais facilidade.
+        
+        Agora nossa contagem regressiva está funcionando para todos os objetivos:
+        
+        alt-text: Animação da tela do projeto no navegador, mostrando o título 'Meus Objetivos do ano' e um quadro com quatro botões. O primeiro botão está sendo clicado, seguido pelo segundo botão, depois o terceiro botão e, por último, o quarto botão. Cada objetivo é alterado, e há uma contagem regressiva em andamento.
+        
+        Prazo finalizado
+        Porém, ao tentar colocar um prazo que já passou, por exemplo, estipular terminar cursos na Alura em 2022, nossa contagem regressiva não finaliza e continua adicionando tempo, mas agora com números negativos.
+        
+        alt-text: Captura de tela do projeto no navegador, indicando o título “Meus Objetivos do ano” e um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há os textos “estudar 4 cursos na Alura”, “tempo para completar o objetivo” e a seguinte contagem regressiva: -4706 dias -12 horas -46 minutos -53 segundos.
+        
+        O código antes era:
+        
+                return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+        COPIAR CÓDIGO
+        Vamos resolver isso adicionando uma mensagem que será exibida quando o prazo for concluído. Para isso, utilizaremos uma função de retorno. Dentro da nossa função calculaTempo, vamos mover o return para dentro do seguinte código:
+        
+        O código agora é:
+        
+           if (tempoFinal > 0){
+                return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+            } else {
+                return "Prazo Finalizado";
+            }
+        COPIAR CÓDIGO
+        Essa parte do código determina se o tempo ainda está em andamento ou se já se passou. Se ainda estiver em andamento, retorna a contagem regressiva formatada; se não, retorna a mensagem "Prazo Finalizado".
+        
+        Assim temos o seguinte resultado:
+        
+        alt-text:  Captura de tela do projeto no navegador, indicando um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “Estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho o texto “Prazo finalizado”
+        
+         DISCUTIR NO FÓRUMGabriela está criando um site que gera cores aleatórias na cor de fundo que usa os comandos:
+
+         Math.floor(Math.random() * 256) para sempre gerar números aleatórios entre 0 e 256;
+         document.body.style.backgroundColor = rgb; para alterar a cor de fundo da página HTML;
+         Com esses comandos, ela desenvolveu o seguinte código:
+         
+         function geraCorAleatoria() {
+           const r = Math.floor(Math.random() * 256);
+           const g = Math.floor(Math.random() * 256);
+           const b = Math.floor(Math.random() * 256);
+           const rgb = "rgb("+r+","+g+","+b+")";
+           document.body.style.backgroundColor = rgb;
+         }
+         
+         setInterval(geraCorAleatoria(), 1000);
+         COPIAR CÓDIGO
+         Entretanto, sua página não está funcionando. De acordo com o enunciado e a análise do código, selecione a alternativa que indica a linha de código que está incorreta.
+         
+         ath.ceil(), Math.floor() e Math.round() são funções matemáticas em JavaScript que são usadas para arredondar números para cima, para baixo ou para o valor mais próximo, respectivamente. Vamos explicar cada uma delas com exemplos, bora nessa?
+
+         Math.ceil()
+         A função math.ceil() arredonda um número para o próximo número inteiro maior ou igual ao número original.
+         
+         Exemplo:
+         
+         console.log(Math.ceil(4.2));  // Saída: 5
+         console.log(Math.ceil(9.8));  // Saída: 10
+         COPIAR CÓDIGO
+         Portanto, podemos pensar que essa função é frequentemente usada quando se precisa garantir que um valor seja arredondado para cima
+         
+         Math.floor()
+         A função math.floor() arredonda um número para o próximo número inteiro menor ou igual ao número original.
+         
+         Exemplo:
+         
+         console.log(Math.floor(7.9));  // Saída: 7
+         console.log(Math.floor(2.1));  // Saída: 2
+         COPIAR CÓDIGO
+         Portanto, podemos pensar que essa função é usada quando se deseja arredondar um valor para baixo.
+         
+         Math.round()
+         A função math.round() arredonda um número para o número inteiro mais próximo. Se a parte decimal for 0.5 ou maior, ele arredonda para cima; caso contrário, arredonda para baixo.
+         
+         Exemplo:
+         
+         console.log(Math.round(3.4));  // Saída: 3
+         console.log(Math.round(5.7));  // Saída: 6
+         COPIAR CÓDIGO
+         Portanto, podemos pensar que essa função é útil para arredondar para o valor mais próximo, considerando os casos em que 0.5 é arredondado para cima.
+         
+          DISCUTIR NO FÓRUMPrimeiramente, vamos entender a diferença entre atualizaCronometro e atualizaCronometro():
+
+          atualizaCronometro: sem os parênteses, estamos nos referindo à função em si. Isto é, estamos falando sobre a função atualizaContador, mas não estamos chamando ela para ser executada.
+          atualizaCronometro(): com os parênteses, estamos chamando/executando a função. Se a função tivesse algum valor de retorno, isso seria imediatamente retornado.
+          Entendendo isso, vamos entender a função setInterval do JavaScript. Ela é uma função de temporização que executa uma função ou uma parte específica do código repetidamente em intervalos específicos, até que seja cancelada.
+          
+          O método setInterval recebe dois argumentos principais:
+          
+          Uma função callback, que é a função que você deseja que seja executada em cada intervalo;
+          Um número que representa o intervalo de tempo em milissegundos.
+          Observe o exemplo abaixo:
+          
+          function comecaCronometro(){
+              setInterval(atualizaCronometro,1000);
+          }
+          COPIAR CÓDIGO
+          Neste caso, o setInterval recebe a função atualizaContador para ser executada a cada 1000 milissegundos (ou seja, a cada segundo).
+          
+          Um erro bastante comum é quando não é passada a função como referência e sim a execução dessa função. Ou seja, adicionando os parênteses na função atualizaContador:
+          
+          function comecaCronometro(){
+                setInterval(atualizaCronometro(),1000);
+          }
+          COPIAR CÓDIGO
+          Quando a função comecaContagem é chamada, ela tenta definir um intervalo, mas em vez de passar a função atualizaCronometro como argumento para setInterval, ela está passando o valor retornado por atualizaContador(). A menos que atualizaContador() retorne uma função outra função, isso causará um erro porque setInterval espera uma função como seu primeiro argumento.
+          
+          Em resumo, o setInterval precisa receber uma referência à função que deve ser chamada, não o resultado da chamada de uma função, a menos que essa chamada retorne a outra função.
+          
+           DISCUTIR NO FÓRUMNesta aula, aprendemos a ajustar a estrutura e estilo da contagem regressiva para corresponder ao protótipo. Agora, vamos revisar nosso código.
+
+           Adicionando tags na div
+           Para exibir a data conforme o protótipo, é necessário criar uma estrutura que agrupe as informações necessárias. Primeiro, vamos realizar um teste simples.
+           
+           Crie um parágrafo p com o texto “Olá contador” na div de classe contador para testar sua funcionalidade:
+           <div class="contador">
+               <p>Olá contador</p>
+           </div>		
+           COPIAR CÓDIGO
+           Observe que o texto "Olá contador" não foi inserido no projeto porque existe um comando no arquivo JavaScript que altera o texto com base nos parâmetros da função declarada.
+           
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “Estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho o texto “Prazo finalizado”.
+           
+           Para resolver este problema, insira // antes do comando comecaCronometro(); no arquivo JavaScript para criar um comentário, inativando-o temporariamente:
+           
+           //comecaCronometro();
+           COPIAR CÓDIGO
+           Agora sim podemos criar uma nova estrutura! Adicione uma div com a classe contador-digito dentro da div de classe contador, conforme mostra o código abaixo:
+           
+           <div class="contador">
+               <div class="contador-digito">
+                   
+               </div>
+           </div>
+           COPIAR CÓDIGO
+           Dentro da div criada, vamos adicionar parágrafos responsáveis por apresentar a quantidade de dias na contagem regressiva:
+           
+           Crie ump de classe contador-digito-numero com o texto “7”;
+           Insira mais um p de classe contador-digito-texto com o texto “dias”;
+           <div class="contador">
+               <div class="contador-digito">
+                   <p class="contador-digito-numero">7</p>
+                   <p class="contador-digito-texto">dias</p>
+               </div>
+           </div>
+           COPIAR CÓDIGO
+           Insira tag.nome-da-classe + ENTER para criar tags com classe rapidamente (Exemplo: p.contador-digito-numero).
+           
+           Assim ficará o seu projeto, exibindo corretamente as informações criadas:
+           
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “Estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho o texto “7 dias”, disposto em coluna.
+           
+           Feito isso, precisamos adicionar a mesma estrutura para horas, minutos e segundos. Podemos agilizar nosso processo de criação, reconhecendo padrões na div que criamos anteriormente.
+           
+           Dentro da mesma div de classe contador, copie e cole 3 vezes a div de classe contador-digito com todas as suas tags;
+           
+           Altere o valor do segundo p de cada div para: horas, min e seg, respectivamente, como mostra o código abaixo:
+           
+           <div class="contador">
+               <div class="contador-digito">
+                   <p class="contador-digito-numero">7</p>
+                   <p class="contador-digito-texto">dias</p>
+               </div>
+               <div class="contador-digito">
+                   <p class="contador-digito-numero">7</p>
+                   <p class="contador-digito-texto">horas</p>
+               </div>
+               <div class="contador-digito">
+                   <p class="contador-digito-numero">7</p>
+                   <p class="contador-digito-texto">min</p>
+               </div>
+               <div class="contador-digito">
+                   <p class="contador-digito-numero">7</p>
+                   <p class="contador-digito-texto">seg</p>
+               </div>
+           </div>
+           COPIAR CÓDIGO
+           Ao visualizar o projeto no navegador, você pode notar que o contador está alinhado verticalmente em colunas:
+           
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “Estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho os textos “7 dias”, “7 horas”, “7 min” e “7 seg”, dispostos em coluna.
+           
+           Precisamos corrigir este alinhamento para que esteja responsivo de acordo com o tamanho da tela.
+           
+           Espaçamento e quebras de texto
+           No arquivo CSS, remova as configurações anteriores da classe .contador e insira display: flex; e justify-content: center; conforme o código a seguir:
+           
+           .contador{
+               display: flex;
+               justify-content: center;
+           }
+           COPIAR CÓDIGO
+           display: flex; : mantêm a disposição dos elementos de forma flexível de acordo com o tamanho da tela.
+           
+           justify-content: center; : alinha os itens ao centro do container.
+           
+           Podemos observar que os textos estão muito próximos e necessitam de um espaçamento:
+           
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com o texto “Estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho os textos “7 7 7 7” e “diashorasminseg”, dispostos em linha.
+           
+           Vamos incluir algumas propriedades na classe .contador-digito do CSS para solucionar esse problema.
+           
+           Corrija o espaçamento adicionando um espaçamento padding de 16px nos eixos esquerda/direita;
+           
+           Agora, adicione text-align: center; para obter um alinhamento dos textos ao centro, entre si;
+           
+           .contador-digito{
+               padding: 0 16px;
+               text-align: center;
+           }
+           COPIAR CÓDIGO
+           Quando dois valores são atribuídos à propriedade, seguimos o padrão: superior/inferior esquerda/direita;. Por este motivo foi declarado o valor "0" no primeiro eixo de padding.
+           
+           Feito isso, conseguimos ajustar o alinhamento do texto! Observe como está ficando nosso projeto:
+           
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com o texto “Estudar 4 cursos na Alura”, “tempo para completar o objetivo” e está destacado por um retângulo vermelho os textos “7 dias”, “7 horas”, “7 min” e “7 seg”, dispostos em linhas.
+           
+           Finalizando o CSS
+           Agora, vamos inserir alguns ajustes finais no CSS, como o tamanho da fonte, cor e remoção de espaçamentos.
+           
+           Na classe .contador-digito-numero, insira:
+           
+           font-size de valor 80px;
+           margin de valor 0, para remover os espaçamentos excessivos.
+           .contador-digito-numero{
+               font-size: 80px;
+               margin: 0;
+           }
+           COPIAR CÓDIGO
+           Agora, na classe .contador-digito-texto, adicione:
+           
+           color atribuindo à variável var(--verde);
+           font-size de valor 20px;
+           margin de valor 0, que também irá remover os espaçamentos excessivos.
+           .contador-digito-texto{
+               color: var(--verde);
+               font-size: 20px;
+               margin: 0;
+           }
+           COPIAR CÓDIGO
+           As configurações de estilo foram ajustadas, mas ao abrir o visualizador percebemos que o conteúdo não está responsivo.
+           
+           Precisamos ajustá-lo para que ocorra uma quebra de texto de acordo com o tamanho da tela, da mesma forma que acontece no texto “Estudar 4 cursos na Alura”.
+           
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com o texto “Estudar 4 cursos na Alura”, e uma seta vermelha indicando quebra de texto, seguido pelas frases “tempo para completar o objetivo”,“7 dias”, “7 horas”, “7 min” e “7 seg”.
+           
+           Para isso, vamos adicionar o comando flex-wrap: wrap; na classe .contador, ele será responsável por quebrar o texto de acordo com a tela, tornando-o responsivo:
+           
+           .contador{
+               display:flex;
+               justify-content: center;
+               flex-wrap: wrap;
+           }
+           COPIAR CÓDIGO
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com o texto “Estudar 4 cursos na Alura”, seguido pelas frases “tempo para completar o objetivo”,“7 dias”, “7 horas”, “7 min” e “7 seg”, dispostos em coluna, indicando quebra de texto.
+           
+           Observe acima que há uma quebra de textos para telas menores.
+           
+           Por fim, vamos definir uma largura fixa de espaçamento entre os números.
+           
+           Insira min-width de valor 100px na classe .contador-digito:
+           .contador-digito{
+               padding: 0 16px;
+               text-align: center;
+               min-width: 100px;
+           }
+           COPIAR CÓDIGO
+           min-width: Define uma largura mínima entre os elementos da classe.
+           
+           Finalizamos o código de mais uma aula! Até agora, seu projeto ficou assim:
+           
+           alt text: Captura de tela do projeto no navegador, indicando um quadro com quatro botões, sendo que o botão de posição zero está sendo clicado. Também há o texto “Estudar 4 cursos na Alura”, “tempo para completar o objetivo”, “7 dias”, “7 horas”, “7 min” e “7 seg”.
+           
+           Te espero na próxima aula!
+           
+            DISCUTIR NO FÓRUM         
